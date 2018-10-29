@@ -1,0 +1,98 @@
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+  cursor: pointer;
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+  &:not(.btn):hover { text-decoration: underline; }
+}
+
+html{
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: $font-default;
+  font-weight: normal;
+  color: $dark-color;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.3;
+  margin: 0px;
+  font-weight: 500;
+}
+
+// Header Styles
+h1 { font-size: $h1-fontsize;}
+h2 { font-size: $h2-fontsize;}
+h3 { font-size: $h3-fontsize;}
+h4 { font-size: $h4-fontsize;}
+h5 { font-size: $h5-fontsize;}
+h6 { font-size: $h6-fontsize;}
+
+@media #{$sm-and-down} {
+  h1 { font-size: $h1-fontsize-small;}
+  h2 { font-size: $h2-fontsize-small;}
+  h3 { font-size: $h3-fontsize-small;}
+  h4 { font-size: $h4-fontsize-small;}
+  h5 { font-size: $h5-fontsize-small;}
+  h6 { font-size: $h6-fontsize-small;}
+}
+
+p { 
+  margin: 0px;
+  line-height: 20px;
+}
+
+.cursor-pointer { cursor: pointer; }
+
+// Text Styles
+em                            { font-style: italic; }
+
+small                         { font-size: 75%; }
+.fz-medium, .fz-medium p      { 
+  font-size: 125%; 
+  line-height: 32px;
+  @media #{$small-and-down} {
+    font-size: 110%; 
+    line-height: 26px;   
+  }
+}
+.fz-large, .fz-large p        { font-size: 150%; line-height: 36px; }
+
+.font-thin                    { font-weight: 200; }
+.font-normal                  { font-weight: 400; }
+.font-strong, strong          { font-weight: 600; }
+
+.uppercase                    { text-transform: uppercase; }
+.lowercase                    { text-transform: lowercase; }
+
+.text-underline               { text-decoration: underline; }
+.text-underline-hover:hover   { text-decoration: underline; }
+
+.text-capitalize              { text-transform: capitalize; }
+
+.text-center                  { text-align: center; } 
+.text-left                    { text-align: left; }
+.text-right                   { text-align: right; }
+
+.line-text-overflow {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.infoAE {
+  text-align: left;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+// Parsley
+.parsley-errors-list li { color: $red-color; }
+
+//Register
+.notice-error { 
+  background-color: $light-color;
+  border-left: 3px solid $primary-color;
+  padding: 10px;
+}

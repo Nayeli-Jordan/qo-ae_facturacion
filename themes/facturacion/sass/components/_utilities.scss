@@ -1,0 +1,542 @@
+// ==========================================================================
+// Utilities
+// ==========================================================================
+
+//Mi cuenta
+#mi-cuenta {
+	.col {
+		margin-bottom: 20px;
+		p:first-child {
+			font-weight: 600;
+		}
+		p:nth-child(2) {
+			/* padding: 0 10px;
+			line-height: 30px;
+			border-radius: 5px;
+			border: 1px solid #d0d0d0; */
+			&.disabledInfo {
+				color: $gray-color;
+    			font-size: 12px;
+			}		
+		}
+	}
+}
+#historial-laboral {
+	.content-empleo {
+		text-align: center;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #d0d0d0;
+		h5 {
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+}
+
+//Vacante
+.card-vacante {
+	margin-bottom: 30px;
+	padding: 15px 0;
+	border: 1px solid #c7c7c7;
+	border-radius: 17px;
+	.bg-image {
+		width: 100%;
+		height: 65px;
+	}
+	.col.s9 {
+		padding-left: 0px;
+		margin-top: 13px;		
+		@media #{$medium-and-up}{ padding: 0px; }
+		h5, h5 p {
+			margin-bottom: 3px;
+			font-weight: 600;
+			cursor: pointer;
+		}
+		p:nth-child(2) {
+			color: #979797;
+			font-weight: 600;
+		}		
+	}
+	.col.s12 { 
+		margin-top: 13px; 
+		@media #{$sm-and-down}{ 
+			text-align: center;
+			margin-top: 10px; 
+		}
+		@media #{$medium-and-up}{
+			text-align: right;
+		}
+	}
+}
+
+//Candidatos
+#candidato {
+	position: relative;
+	background-color: #e8e8e8;
+	border-radius: 10px;
+	border: 1px solid #00b4ef;
+	overflow: hidden;
+	& .col.introCandidato {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: #fff;
+		background-color: #00b4ef;
+		.nombre-candidato { font-weight: 600; }
+		.fecha-prueba-candidato { font-size: 11px; }
+		.cv-candidato {
+			position: absolute;
+			font-size: 12px;
+			a { 
+				color: $light-color; 
+				&:hover { text-decoration: underline; }
+			}			
+		}
+		& + .col { padding-top: 10px; }
+		.btn-detallesCandidato {
+			color: $primary-color;
+			background-color: $light-color;
+			span.hide {
+			    line-height: 26px;
+			    font-size: 40px;
+			}
+			&.on {
+				span:first-child { display: none; }
+				span.hide { display: block; }
+			}
+		}
+	}
+	.tipo-prueba {
+		p {
+			margin-bottom: 2px;
+			&:first-child {
+				margin-bottom: 5px;
+				padding: 0 10px;
+				color: #fff;    
+			    text-align: center;
+			    background-color: $primary-color;
+			    border-radius: 5px;
+			}
+			.docPrueba { 
+				float: right; 
+				width: 20px;
+				font-size: 10px;
+				color: $primary-color;
+				text-align: center;
+				border-radius: 50%;		
+				background-color: $light-color;		
+			}
+		}
+		&.tipo-prueba-doc {
+			p:first-child {
+				text-align: left;
+				padding: 5px 10px;				
+			}
+			.docPrueba {
+				color: $primary-color;
+				background-color: $light-color;
+			}
+		}
+	}
+	.puesto-candidato,
+	.tipo-prueba p:first-child {
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 600;
+	}
+	.tipo-prueba p:not(:first-child),
+	.infoExtraCandidato {
+		span {
+			margin-right: 5px;
+			font-size: 11px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+	.detallesCandidato {
+		display: none;
+		padding: 10px 0;
+		&.active { display: block; }
+	}
+	@media #{$sm-and-down} {
+		.viableCandidato {
+			display: none;
+			&.active { display: block; }
+		}
+	}
+}
+
+/* Cartas */
+.single-ae_cartas {
+	font-size: 12px;
+	.page-carta {
+		.row {
+			/* Eliminar padding */
+			width: calc(100% + 21px);
+			left: -10.5px;
+			position: relative;
+		}
+		.header-carta {
+			.encabezado-cartas {
+				margin-bottom: 10px;
+				text-align: right;
+				//img { height: 50px; } Borroso
+				p { font-size: 12px; }
+			}
+			.infoEmpresa p{
+				line-height: 15px;
+				font-weight: 600;
+			}
+		}
+		.body-carta {
+			text-align: justify;
+			p {
+				margin-bottom: 10px;
+				line-height: 18px;
+				strong { text-transform: uppercase; }
+			}
+		}
+		.footer-carta {
+			.content-firma {
+				width: 100%;
+				height: 70px;
+				img {
+					display: block;
+					margin: 0 auto;
+					height: 70px;
+				}
+			}
+			.imgAE { 
+				width: 200px; 
+				//transform: rotate(-1deg);
+			}
+		}
+
+		.header-reglamentoGafete {
+			margin-top: 50px;
+		}
+		.body-reglamentoGafete {
+			text-align: justify;
+			p {
+				margin-bottom: 10px;
+				line-height: 18px;
+			}
+			ul {
+				padding-left: 15px;
+				margin-bottom: 10px;
+				li {
+					list-style: disc;
+				}
+			}
+		}
+
+		.content-credencial {
+			font-size: 10px;
+			p { font-weight: 600; }
+			.credencial-frente,
+			.credencial-atras,
+			.credencial-footer {
+				position: absolute;
+			}
+			.credencial-frente {
+				top: 70px;
+				left: 185px;
+				p {
+					width: 150px;
+					line-height: 15px;
+					height: 30px;
+					overflow: hidden;
+					&:first-child { 
+						text-transform: uppercase;
+						margin-bottom: 15px; 
+					}
+					&:nth-child(2) { margin-left: 15px; }
+				}
+			}
+			.credencial-atras {
+				top: 50px;
+				right: 20px;
+				width: 220px;
+				text-align: center;
+				p { 
+					text-transform: uppercase;
+					margin-top: 10px; 
+				}
+			}
+			.credencial-footer {
+				right: 0px;
+				bottom: 9px;
+				width: 50%;
+				text-align: center;
+			}
+		}
+
+		&.solicitudAcceso {
+			padding: 40px 20px;
+		}
+		.tableIntro {
+			border: 1px solid #656565;
+			width: 200px;
+			margin-bottom: 10px;
+			text-align: center;
+			font-size: 9px;
+			line-height: 10px;
+		}
+		.encabezadoTabla {
+			margin-bottom: -1px;
+			text-align: center;
+			font-size: 8px;
+			line-height: 12px;
+	    	font-weight: 600;
+			background-color: #adacac;
+			border: 1px solid gray;
+		}
+		table:not(.table-carta) {
+			width: 100%;
+			margin-bottom: 10px;
+			font-size: 9px;
+			font-weight: 500;
+			border: 1px solid #656565;
+			border-collapse: collapse;
+			&.no-margin-bottom { margin-bottom: 0px; }
+			tr {
+				line-height: 10px;
+				&.tableAlign td{ width: calc(100% / 12); }
+				td {
+					text-align: left;
+					border: 1px solid #656565;
+					vertical-align: top;
+					&.text-center { text-align: center!important; }
+					&.align-middel { vertical-align: middle; }
+					&.fieldClean { color: $light-color; }
+					&.fz-minor, .fz-minor { font-size: 8px; }
+					.simuleTable {
+						width: calc(100% + 4px);
+						margin-left: -2px;
+						text-align: center;
+						display: inline-block;
+						border: 1px solid #656565;
+					}
+					.block-option {
+						position: relative;
+						display: inline-block;
+						width: 7px;
+						height: 7px;
+						margin: 0 5px 0px;
+						border: 1px solid #656565;
+						.icon-check {
+							position: absolute;
+							top: -4px;
+							left: -3px;
+							font-size: 8px;
+						}
+					}
+				}			
+			}
+		}
+		.infoSolicitud {
+			font-size: 8px;
+			line-height: 10px;
+		}
+		.contentExclusion {
+			position: relative;
+			font-size: 7px;
+	    	font-weight: 600;
+	    	text-align: justify;
+	    	padding: 5px; 
+	    	margin-bottom: 10px;
+	    	border: 1px solid #656565;
+	    	p { 
+	    		line-height: 11px;
+	    		letter-spacing: -0.2px;
+	    		margin-bottom: 5px;
+	    	}
+	    	.content-ejecutivo {
+				width: 40%;
+				margin: 10px auto 0;
+				padding: 3px 10px;
+				text-align: center;
+				border: 1px solid #656565;
+				div {
+					height: 50px;
+					img { height: 50px;}
+				}
+				hr { 
+					margin-top: 0px;
+					background-color: #969696 
+				}
+	    	}
+	    	.imgAE {
+	    		width: 200px;
+			    position: absolute;
+			    bottom: 2px;
+			    right: 2px;
+	    	}
+		}		
+	}
+}
+
+.content-card-alerta {
+	 @media #{$medium-only} {
+	 	&:nth-child(2n+1){ clear: both; }
+	 }
+	 @media #{$large-and-up} {
+	 	&:nth-child(3n+1){ clear: both; }
+	 }
+}
+.card-carta {
+	margin-bottom: 15px;
+	border-radius: 5px;
+	border: 1px solid $primary-color;
+	@extend %shadow;
+
+	.title-cart {
+		padding: 5px;		
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 600;
+		text-shadow: 1px 1px #d0d0d0;
+		background-color: $primary-color;		
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		a { color: $light-color; }
+	}
+	.card-body {
+		padding: 10px;
+		p {
+			//min-height: 60px;
+			font-size: 12px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			strong {
+				display: inline-block;
+				width: 70px;
+			}
+		}
+		a {
+		    display: block;
+		    margin-top: 10px;
+		    color: $primary-color;
+		    text-align: center;
+		    font-weight: 600;		    
+		    line-height: 30px;
+		    border: 1px solid $primary-color;
+		    border-radius: 5px;
+		    transition: .3s ease-out;
+		    &:hover {
+		    	color: $light-color;
+		    	background-color: $primary-color;
+		    }
+		}		
+	}
+	&.card-alerta {
+		p { 
+			strong { 
+				width: auto;
+    			margin-right: 5px;
+				&.width-100p { width: 100%!important; }
+			}
+		}
+	}
+}
+
+
+//Facturación
+.weekAlert {
+	position: relative;
+	display: none;
+	cursor: pointer;
+	&:hover span { display: inline-block; }
+	i {
+		display: inline-block;
+   		font-size: 18px;		
+	}
+	span {
+		display: none;
+		position: absolute;
+		top: -25px;
+    	left: -55px;
+		width: 140px;
+		background-color: #fff;
+		//border: 1px solid red;
+		box-shadow: 2px 3px 2px 0 rgba(0,0,0,0.25);
+	}
+}
+.weekAlertActive {
+	.weekAlert { display: inline-block; }
+	.card-carta {
+		.title-cart {
+			//background-color: $primary-color-dark;
+		}
+	}
+}
+
+.tipo-prueba-doc p {
+	text-align: left;
+	padding: 5px 10px;
+}
+
+
+.divider-form {
+	border-top: 1px solid $primary-color;
+    padding-top: 10px!important;
+    margin-top: 10px;
+}
+
+/* Alerta vacante  */
+#content-alertas-vacante {
+	margin-bottom: 50px!important;
+	.alerta-vacante {
+		padding: 10px;
+		border: 1px solid $primary-color;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		.title-area { 
+			margin-bottom: 5px;
+			padding: 0 10px;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 600; 
+			color: $primary-color;
+		}
+		table {
+			width: 100%;
+			
+			tr { 
+				text-align: left; 
+				th {
+					width: 33.33%;
+					font-size: 8px;
+					text-transform: uppercase;
+				}
+				td {
+					font-size: 12px;
+				}	
+			}
+			@media #{$large-and-up}{ border-right: 1px solid $primary-color; }
+			@media #{$sm-and-down}{
+				tr {
+					display: block;
+					margin-bottom: 5px;
+					th { display: none; }
+					td {
+						width: 100%;
+						display: block;					
+					}					
+				}
+			}
+		}
+		@media #{$large-and-up}{ .no-users { border-right: 1px solid $primary-color; } }
+		.content-vacante {
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 8px;
+		}
+		.block-vacantes {
+			font-size: 12px;
+		}
+	}	
+}

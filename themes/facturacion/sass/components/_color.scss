@@ -1,0 +1,21 @@
+// Color
+// ==========================================================================
+
+.color-primary 			{ color: $primary-color; }
+
+.color-light 			{ color: $light-color; }
+.color-dark 			{ color: $dark-color; }
+.color-red 				{ color: $red-color; }
+
+
+// Bg Color
+// ==========================================================================
+
+.bg-color-primary 		{ background-color: $primary-color; }
+.bg-color-primary-3 	{ background-color: rgba(0, 180, 239, 0.30); }
+.bg-opacity-dark		{ background-color: rgba(0, 0, 0, 0.2); }
+.bg-opacity-dark-35		{ background-color: rgba(0, 0, 0, 0.35); }
+.bg-opacity-primary		{ background-color: rgba(7, 106, 177, 0.68); }
+.bg-gray				{ background-color: #e0e0e0; }
+.bg-light				{ background-color: $light-color; }
+.bg-degrade-primary		{ background-image: linear-gradient(rgba(0, 125, 167, 0.6), rgba(11, 51, 64, 0.1)); }

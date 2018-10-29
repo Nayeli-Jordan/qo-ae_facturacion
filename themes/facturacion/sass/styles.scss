@@ -1,0 +1,26 @@
+@charset "UTF-8";
+// Variables
+@import "components/variables";
+
+// Componentes
+@import "components/box-model";
+@import "components/buttons";
+@import "components/color";
+@import "components/effects";
+@import "components/forms";
+@import "components/global";
+@import "components/grid";
+@import "components/icons";
+@import "components/media";
+@import "components/modal";
+@import "components/position";
+@import "components/shape";
+@import "components/typography";
+@import "components/utilities";
+
+// Estructura
+@import "components/header";
+@import "components/footer";
+
+//Print
+@import "components/print";

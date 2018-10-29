@@ -1,0 +1,133 @@
+// Position
+// ==========================================================================
+
+.absolute 					{ position: absolute; }
+.relative 					{ position: relative; }
+
+.top-0          			{ top: 0; }
+.bottom-0          			{ bottom: 0; }
+.right-0          			{ right: 0; }
+.left-0          			{ left: 0; }
+
+// Position top, left, right, left -100% to 100%
+$i: -100;
+@while $i <= $size-percent {
+	.top-#{$i}#{"p"} {
+		top: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
+$i: -100;
+@while $i <= $size-percent {
+	.bottom-#{$i}#{"p"} {
+		bottom: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
+$i: -100;
+@while $i <= $size-percent {
+	.left-#{$i}#{"p"} {
+		left: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
+$i: -100;
+@while $i <= $size-percent {
+	.right-#{$i}#{"p"} {
+		right: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
+
+// Align
+// ==========================================================================
+.alight-middle 				{ vertical-align: middle; }
+
+
+// Align
+// ==========================================================================
+.float-none					{ float: none!important; } 
+
+// Display
+// ==========================================================================
+
+.hide 						{ display: none; }
+.block 						{ display: block; }
+.inline-block 				{ display: inline-block; }
+.flex 						{ display: flex; }
+
+@media #{$small-and-down} 		{ .hide-on-small 			{ display: none; } }
+@media #{$sm-and-down} 			{ .hide-on-sm-and-down 		{ display: none; } }
+@media #{$sm-only} 				{ .hide-on-sm 				{ display: none; } }
+@media #{$sm-and-up} 			{ .hide-on-sm-and-up 		{ display: none; } }
+@media #{$medium-and-down} 		{ .hide-on-med-and-down 	{ display: none; } }
+@media #{$medium-only} 			{ .hide-on-med 				{ display: none; } }
+@media #{$medium-and-up} 		{ .hide-on-med-and-up 		{ display: none; } }
+@media #{$large-and-down} 		{ .hide-on-large-and-down 	{ display: none; } }
+@media #{$large-only} 			{ .hide-on-large 			{ display: none; } }
+@media #{$large-and-up} 		{ .hide-on-large-and-up 	{ display: none; } }
+@media #{$extra-large-and-up} 	{ .hide-on-extra-large 		{ display: none; } }
+
+@media #{$small-and-down} 		{ .show-on-small 			{ display: block; } }
+@media #{$sm-and-down} 			{ .show-on-sm-and-down 		{ display: block; } }
+@media #{$sm-only} 				{ .show-on-sm 				{ display: block; } }
+@media #{$sm-and-up} 			{ .show-on-sm-and-up 		{ display: block; } }
+@media #{$medium-and-down} 		{ .show-on-med-and-down 	{ display: block; } }
+@media #{$medium-only} 			{ .show-on-med 				{ display: block; } }
+@media #{$medium-and-up} 		{ .show-on-med-and-up 		{ display: block; } }
+@media #{$large-and-down} 		{ .show-on-large-and-down 	{ display: block; } }
+@media #{$large-only} 			{ .show-on-large 			{ display: block; } }
+@media #{$large-and-up} 		{ .show-on-large-and-up 	{ display: block; } }
+@media #{$extra-large-and-up} 	{ .show-on-extra-large 		{ display: block; } }
+
+.user-logged-in .hide-login		{ display: none!important; }
+.user-logged-out .hide-logout	{ display: none!important; }
+
+
+// Clear
+// ==========================================================================
+.clear { clear: both; }
+
+@media #{$small-and-down} 		{ .clear-on-small 			{ clear: both; } }
+@media #{$sm-and-down} 			{ .clear-on-sm-and-down 	{ clear: both; } }
+@media #{$sm-only} 				{ .clear-on-sm 				{ clear: both; } }
+@media #{$sm-and-up} 			{ .clear-on-sm-and-up 		{ clear: both; } }
+@media #{$medium-and-down} 		{ .clear-on-med-and-down 	{ clear: both; } }
+@media #{$medium-only} 			{ .clear-on-med 			{ clear: both; } }
+@media #{$medium-and-up} 		{ .clear-on-med-and-up 		{ clear: both; } }
+@media #{$large-and-down} 		{ .clear-on-large-and-down 	{ clear: both; } }
+@media #{$large-only} 			{ .clear-on-large 			{ clear: both; } }
+@media #{$large-and-up} 		{ .clear-on-large-and-up 	{ clear: both; } }
+@media #{$extra-large-and-up} 	{ .clear-on-extra-large 	{ clear: both; } }
+
+
+// Visibility
+// ==========================================================================
+
+.overflow-hide 				{ overflow: hidden;}
+.overflow-x-hide 			{ overflow: hidden;}
+.overflow-y-hide 			{ overflow: hidden;}
+
+.z-index-1 					{ z-index: 1; }
+.z-index--1 				{ z-index: -1; }
+
+
+// Transform & Alination
+// ==========================================================================
+
+.transform-x-50 { transform: translateX(50%); }
+
+@mixin center-full{
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%)
+}
+
+.content-center { 
+	width: 100%;
+	@include center-full(); 
+}

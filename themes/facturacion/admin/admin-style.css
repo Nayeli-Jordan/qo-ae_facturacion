@@ -1,0 +1,179 @@
+/* General styles admin */
+.width-25p 			{ width: 25%; }
+.width-50p 			{ width: 50%; }
+.vertical-top 		{ vertical-align: top; }
+::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+.margin-bottom-large { margin-bottom: 30px; }
+.margin-top-large { margin-top: 30px; }
+.margin-top-small { margin-top: 10px; }
+.hide { display: none; }
+
+.fz-xsmall { font-size: 10px; }
+.text-center { text-align: center;  }
+.uppercase { text-transform: uppercase;  }
+
+.bg-gray-light { background-color: #eee; }
+
+/* Forms style */
+.ae-custom-fields, .ae-custom-fields tbody { width: 100%; }
+.ae-custom-fields input[type="text"],
+.ae-custom-fields input[type="date"],
+.ae-custom-fields input[type="number"],
+.ae-custom-fields textarea,
+.ae-custom-fields select {
+	width: 100%;
+	min-height: 40px;
+	padding: 0 5px;
+	margin: 0px;
+	font-weight: 400;
+    line-height: 40px;   
+}
+.ae-custom-fields textarea { line-height: 20px; }
+.ae-custom-fields tr { margin-bottom: 10px; }
+.ae-custom-fields th { text-align: left; }
+.ae-custom-fields label { 
+	display: block;
+	margin-bottom: 3px;
+	font-weight: 500;
+	cursor: auto;
+}
+.ae-custom-fields .button {	  
+	padding: 0 20px;  
+    height: 30px;
+    line-height: 30px;
+    float: right;
+	color: #fff;
+	background-color: #00B4EF;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+}
+.ae-custom-fields .image-preview img { max-width: 100%; }
+.ae-custom-fields .input-doc { width: 100%; }
+.ae-custom-fields .input-doc .button {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/* Post types alto empleo */
+.post-type-ae_candidatos #post-body #normal-sortables,
+.post-type-ae_candidatos #edit-slug-box,
+.post-type-ae_empleados #post-body #normal-sortables,
+.post-type-ae_empleados #edit-slug-box,
+.post-type-ae_empresas #post-body #normal-sortables,
+.post-type-ae_empresas #edit-slug-box,
+.post-type-ae_tiendas #post-body #normal-sortables,
+.post-type-ae_tiendas #edit-slug-box,
+.post-type-ae_cartas #post-body #normal-sortables,
+.post-type-ae_rgafete #post-body #normal-sortables,
+.post-type-ae_rgafete #post-body #titlewrap,
+.post-type-ae_credencial #post-body #normal-sortables,
+.post-type-ae_credencial #post-body #titlewrap,
+.post-type-ae_sacceso #post-body #normal-sortables,
+.post-type-ae_alertas #post-body #normal-sortables,
+.post-type-ae_vacantes #post-body #normal-sortables { display: none; }
+
+#ae_candidatos_meta,
+#ae_empleados_meta,
+#ae_cartas_meta,
+#ae_vacantes_meta { 
+	background-color: #ececec; 
+	border-color: #00B4EF; 
+}
+#ae_candidatos_meta h2,
+#ae_empleados_meta h2,
+#ae_cartas_meta h2,
+#ae_vacantes_meta h2 { 
+	color: #fff;
+	background-color: #00B4EF; 
+}
+#ae_candidatos_meta .toggle-indicator:before,
+#ae_empleados_meta .toggle-indicator:before,
+#ae_cartas_meta .toggle-indicator:before,
+#ae_vacantes_meta .toggle-indicator:before  {
+	color: #fff;
+}
+
+/* Candidatos */
+.post-type-ae_candidatos .pruebas select { margin-bottom: 10px; }
+
+/* Cartas */
+.input-image, .image-preview {
+	display: inline-block;
+	float: left;
+}
+.input-image {
+	width: 70%;
+}
+.image-preview {
+	margin-left: 3%;
+	margin-bottom: 10px;
+	width: 27%;
+	min-height: 100px;
+	background-color: #fff;
+}
+
+
+/* Estilos login */
+#login #nav {
+	display: none;
+}
+
+html, body.login { 
+	background-color: #fff!important; 
+	height: inherit;
+}
+#login h1 a, #login .login h1 a {
+    width: 100%;
+    height: 90px;
+    background-image: url(../images/identidad/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#login .message {
+	border-left: 4px solid #00B4EF;
+}
+#login #login_error a,
+#login .message {
+	color: #00B4EF;
+	font-weight: 500;
+}
+#login #login_error,
+#login .message,
+#login form {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.14), 3px -2px 1px -2px rgba(0,0,0,0.12);
+}
+#login #backtoblog a{
+	font-size: 20px;
+	font-weight: 500;
+	color: #00B4EF!important;
+}
+#login .button { 
+	background-color: #00B4EF!important;
+	text-shadow: none;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.14);
+    border: 0px;
+}
+#login .button:hover {
+	background-color: #00B4EF!important;
+}
+
+/* Menú wordpress */
+#menu-posts-ae_vacantes,
+#menu-posts-wbcr-snippets { margin-top: 15px!important; } 
+#menu-posts-wbcr-snippets + .wp-menu-separator { display: none; }
+#menu-posts-ae_cartas ul li.wp-first-item + li { border-bottom: 1px solid #5e5e5e; }
+#menu-posts-ae_cartas ul li:nth-child(6) { border-bottom: 1px solid #5e5e5e; }
+
+#facturacionPreestablecida div {
+	width: 23%;
+    margin: 0 1% 10px;
+    float: left;
+}
+#facturacionPreestablecida div label { 
+    color: gray;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}

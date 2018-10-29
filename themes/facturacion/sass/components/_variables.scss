@@ -1,0 +1,78 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+// Colors
+// ==========================================================================
+
+//$primary-color: #bc1582 !default;
+$primary-color: 		#00B4EF !default;
+$primary-color-light: lighten($primary-color, 5%) !default;
+$primary-color-dark: darken($primary-color, 5%) !default;
+
+$light-color: 			#fff !default;
+$dark-color: 			#0e0e0e !default;
+
+$red-color: 			#d40000 !default;
+$gray-color: 			#808080 !default;
+
+
+// Global
+// ==========================================================================
+
+// Media Query Ranges
+$small-screen-up: 		430px !default;
+$sm-screen: 			431px !default;
+$sm-screen-up: 			600px !default;
+$medium-screen: 		601px !default;
+$medium-screen-up: 		992px !default;
+$large-screen: 			993px !default;
+$large-screen-up: 		1200px !default;
+$xlarge-screen: 		1201px !default;
+
+
+$small-and-down: 		"only screen and (max-width : #{$small-screen-up})" !default;
+$sm-and-down: 			"only screen and (max-width : #{$sm-screen-up})" !default;
+$sm-only: 				"only screen and (min-width : #{$sm-screen}) and (max-width : #{$sm-screen-up})" !default;
+$sm-and-up: 			"only screen and (min-width : #{$sm-screen})" !default;
+$medium-and-down: 		"only screen and (max-width : #{$medium-screen-up})" !default;
+$medium-only: 			"only screen and (min-width : #{$medium-screen}) and (max-width : #{$medium-screen-up})" !default;
+$medium-and-up: 		"only screen and (min-width : #{$medium-screen})" !default;
+$large-and-down: 		"only screen and (max-width : #{$large-screen-up})" !default;
+$large-only: 			"only screen and (min-width : #{$large-screen}) and (max-width : #{$large-screen-up})" !default;
+$large-and-up: 			"only screen and (min-width : #{$large-screen})" !default;
+$extra-large-and-up:	"only screen and (min-width : #{$large-screen-up})" !default;
+
+
+// Grid
+// ==========================================================================
+$num-cols: 				12 !default;
+$gutter-width: 			1.5rem !default;
+
+
+// Margin & Padding
+// ==========================================================================
+$box-space: 			30px !default;
+
+// Size
+// ==========================================================================
+$size-percent:			100 !default;
+
+// Typography
+// ==========================================================================
+$font-default: 			'Montserrat', sans-serif !default;
+
+// Header Styles
+$h1-fontsize: 			24px !default;
+$h2-fontsize: 			34px !default;
+$h3-fontsize: 			22px !default;
+$h4-fontsize: 			18px !default;
+$h5-fontsize: 			16px !default;
+$h6-fontsize: 			14px !default;
+
+$h1-fontsize-small: 			24px !default;
+$h2-fontsize-small: 			28px !default;
+$h3-fontsize-small: 			22px !default;
+$h4-fontsize-small: 			18px !default;
+$h5-fontsize-small: 			16px !default;
+$h6-fontsize-small: 			14px !default;

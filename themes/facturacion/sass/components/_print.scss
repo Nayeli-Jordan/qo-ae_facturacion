@@ -1,0 +1,16 @@
+@media print {
+	@page{ margin: 0; }
+	// Global
+	.hide-on-print, .title-ae, footer { display: none; }
+	
+	section.single-ae_cartas { margin: 0px; }
+	.page-carta {
+		margin: 0px;
+		width: 100vw;
+		height: 100vh;
+		max-height: 100vh;
+		box-shadow: none;
+		overflow: hidden;
+		.content-credencial img { margin-top: 4px; }
+	}
+}
