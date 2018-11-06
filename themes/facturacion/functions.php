@@ -14,6 +14,7 @@ define( 'ORIGINALURL', 'http://www.altoempleo.com.mx/' );
 \*------------------------------------*/
 require_once( 'inc/pages.php' );
 require_once( 'inc/post-types.php' );
+require_once( 'inc/taxonomies.php' );
 
 /*------------------------------------*\
     #GENERAL FUNCTIONS
@@ -255,7 +256,7 @@ function display_ae_alertas_atributos( $ae_alertas ){
                 <select name="ae_alertas_periodoQuincenal1" id="ae_alertas_periodoQuincenal1" required>
                     <option value="" <?php selected($periodoQuincenal1, ''); ?>></option>
                     <?php $day1 = 1;
-                    while ( $day1 < 15) { ?>
+                    while ( $day1 < 16) { ?>
                         <option value="<?php echo $day1; ?>" <?php selected($periodoQuincenal1, $day1); ?> id="<?php echo $day1; ?>"><?php echo $day1; ?></option>
                         <?php $day1++;
                     } ?>
@@ -265,7 +266,7 @@ function display_ae_alertas_atributos( $ae_alertas ){
                 <label>Segunda Quincena del mes:</label>
                 <select name="ae_alertas_periodoQuincenal2" id="ae_alertas_periodoQuincenal2" required>
                     <option value="" <?php selected($periodoQuincenal2, ''); ?>></option>
-                    <?php $day2 = 15;
+                    <?php $day2 = 16;
                     while ( $day2 < 32) { ?>
                         <option value="<?php echo $day2; ?>" <?php selected($periodoQuincenal2, $day2); ?>><?php echo $day2; ?></option>
                         <?php $day2++;

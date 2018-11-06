@@ -8,7 +8,7 @@
 	<?php if (!is_user_logged_in()) : ?> 
 		<?php include (TEMPLATEPATH . '/templates/template-ae-logout.php'); ?>
 	<?php else: ?>
-		<section class="[ container ] margin-bottom-20">
+		<section class="[ container ] margin-bottom-40">
 			<div class="row">
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -29,6 +29,16 @@
 						<div class="card-carta card-alerta">
 							<p class="title-cart"><?php the_title() ?></p>
 							<div class="card-body">
+								<?php 
+								$ejecutivo = '';
+								$terms = get_the_terms($post->ID, 'tax_ejecutivo');
+								if ( is_array( $terms ) ) {
+									foreach($terms as $term){
+										$ejecutivo .= $term->name . ' <small>(' . $term->description . ')</small>';
+									}
+								}
+								?>
+								<p><strong>Ejecutivo: </strong><?php echo $ejecutivo; ?></p>
 								<p><strong>Inicio Contrato: </strong><?php echo $dateContratoEsp; ?></p>
 								<p class="margin-bottom-xxsmall"><strong>Periodo facturación: </strong>
 									<?php if( $periodoFacturacion === "Personalizada" ) : ?>

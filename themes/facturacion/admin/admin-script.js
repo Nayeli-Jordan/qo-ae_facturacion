@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
 			var idOption 		= $('select#ae_alertas_periodoQuincenal1 option:selected').attr('id');
 			/* Transform idOption text in number */
 			var idOption 		= parseInt(idOption);
-			var optionQuincena2 = idOption + 14;			
+			var optionQuincena2 = idOption + 15;			
 			$('select#ae_alertas_periodoQuincenal2').val(optionQuincena2);
 		});
 		/* Estableces "1 y 15" como fecha de facturación si se selecciona "Quincena" */

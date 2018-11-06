@@ -36,7 +36,8 @@
 			$headers 		   .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 			$message 			 = '<html style="font-family: Arial, sans-serif;"><body>';
-			$message 			.= '<h1 style="display: block; margin-bottom: 20px; padding: 10px; color: #fff; text-align: center;  font-size: 20px; background-color: #00B4EF;">Pr&oacute;ximas Facturaciones</h1>';
+			$message 			 = '<div style="text-align: center; background-color: #00B4EF; margin-bottom: 20px;"><img style="display: inline-block; margin: auto;" src="' . THEMEPATH . 'images/email/logo-light.png"></div>';
+			$message 			.= '<h1 style="display: block; margin-bottom: 30px; text-align: center;  font-size: 20px; font-weight: 700; color: #00B4EF; text-transform: uppercase;">Pr&oacute;ximas Facturaciones</h1>';
 			//echo "HEADER EMAIL <br>";
 
 	        while ( $loop->have_posts() ) : $loop->the_post(); 
@@ -49,11 +50,11 @@
 					/* Conocer si al menos hay una facturación próxima (al día siguiente) para enviar el mail */
 					$i++;
 
-					$message 			.= '<p style="color: #00B4EF; text-transform: uppercase;"><strong>' . $post_title . '</strong></p>';
+					$message 			.= '<p style="color: #00B4EF; text-transform: uppercase; font-size: 20px;"><strong>' . $post_title . '</strong></p>';
 					$message 			.= '<p><strong>Inicio Contrato: </strong>' . $dateContratoEsp . '</p>';
 					$message 			.= '<p><strong>Periodo de Facturaci&oacute;n: </strong>' . $periodoFacturacion  . '</p>';
 					$message 			.= '<p style="margin-bottom: 20px;"><strong>Pr&oacute;xima Facturaci&oacute;n: </strong>' . $proxFacturacionEsp  . '</p>';
-					$message 			.= '<hr style="height: 1px; border: 0px; background-color: #00b4ef;">';
+					/*$message 			.= '<hr style="height: 1px; border: 0px; background-color: #00b4ef;">';*/
 					//echo $post_title . ' <br>';
 
 				endif;
@@ -65,13 +66,11 @@
 			}
 
 			/* Sí hubo al menos una alerta, entonces enviar email (Email Footer) */
-			$message 			.= '<br><p style="text-align: center; background-color: #00b4ef; display: inline-block; line-height: 35px; padding: 0 20px; border-radius: 5px;"><a style=" color: #fff; text-decoration: none;" href="' . SITEURL . 'ae_alertas/">Ver todas</a></p>';
-			$message 			.= '<a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; width: 200px; margin: auto;" src="' . THEMEPATH . 'images/identidad/logo.png"></a>';
-			$message 			.= '</body></html>';
+			$message 			.= '<br><p style="text-align: center;"><a style="color: #00B4EF; font-weight: 700; text-decoration: none; text-transform: uppercase;" href="' . SITEURL . 'ae_alertas/">Ver todas</a></p>';
+			$message	        .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="' . THEMEPATH . 'images/email/logoae.png"></a></div>';
+			$message	        .= '</body></html>';
 
 		    mail($to, utf8_decode($subject), utf8_decode($message), $headers);
-		    //echo "FOOTER EMAIL  <br>";
-
 	   	} 
 	    wp_reset_postdata();
 	?>

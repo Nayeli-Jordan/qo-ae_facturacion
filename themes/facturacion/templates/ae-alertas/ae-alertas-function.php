@@ -42,7 +42,7 @@
 
 	setlocale(LC_ALL,"es_ES"); /* Convertir meses a español*/
 	$today      		= date('Y-m-d'); /* Hoy */
-	/* Activar alerta un día antes */
+	/* Activar alerta dos días antes */
 	$FacturaAlert    	= date('Y-m-d', strtotime($today . '+ 2 day'));
 
 	$dateContrato 		= date('d-M-Y', strtotime($inicioContrato));
