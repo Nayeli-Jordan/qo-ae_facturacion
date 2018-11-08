@@ -61,17 +61,16 @@
 						$post_title		= get_the_title();
 						include (TEMPLATEPATH . '/templates/ae-alertas/ae-alertas-function.php');	
 
-						/*Si falta menos de dos días para la Facturación visualizar: */
-						if ($proxFacturacion >= $today && $proxFacturacion <= $FacturaAlert) : 
+						/*Si falta dos días para la Facturación visualizar. Sólo se envía un correo dos días antes, NO cada día hasta la facturación */
+						if ($today === $FacturaAlert) : 
 
 							/* Conocer si al menos hay una facturación próxima (al día siguiente) para enviar el mail */
 							$i++;
 
-							$body 			.= '<p style="color: #00B4EF; text-transform: uppercase; font-size: 18px;"><strong>' . $post_title . '</strong></p>';
+							$body 			.= '<div style="text-align: center; margin-bottom: 10px;"><p style="color: #00B4EF; text-transform: uppercase; font-size: 18px;"><strong>' . $post_title . '</strong></p>';
 							$body 			.= '<p><strong>Inicio Contrato: </strong>' . $dateContratoEsp . '</p>';
 							$body 			.= '<p><strong>Periodo de Facturaci&oacute;n: </strong>' . $periodoFacturacion  . '</p>';
-							$body 			.= '<p style="margin-bottom: 20px;"><strong>Pr&oacute;xima Facturaci&oacute;n: </strong>' . $proxFacturacionEsp  . '</p>';
-							/*$message 			.= '<hr style="height: 1px; border: 0px; background-color: #00b4ef;">';*/
+							$body 			.= '<p style="margin-bottom: 20px;"><strong>Pr&oacute;xima Facturaci&oacute;n: </strong><strong style="color: #00B4EF">' . $proxFacturacionEsp  . '</strong></p></div>';
 
 						endif;
 				    endwhile; 

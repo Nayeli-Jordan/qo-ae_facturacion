@@ -42,7 +42,7 @@
 
 	setlocale(LC_ALL,"es_ES"); /* Convertir meses a español*/
 	$today      		= date('Y-m-d'); /* Hoy */
-	/* Activar alerta si es cercana pero no es el día de la alerta por correo */
+	/* Activar alerta si es cercana pero no es el día de la alerta por correo. Sólo se obtiene la suma de hoy + 2 días y se compara con la fecha de facturación */
 	$FacturaDanger    	= date('Y-m-d', strtotime($today . '+ 2 day'));
 
 	$dateContrato 		= date('d-M-Y', strtotime($inicioContrato));
