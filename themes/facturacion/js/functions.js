@@ -33,21 +33,6 @@ var $=jQuery.noConflict();
 		});
 
 		// Nav Alto Empleo
-		$(".btn-ae-nav").click(function() {
-			$('.ae-nav').addClass('active');
-		});
-
-		$(".close-ae-nav span").click(function() {
-			$('.ae-nav').removeClass('active');
-		});
-
-		// Nav Mobile
-		$("#btn-nav-mobile").click(function() {
-			$('#nav-mobile').addClass('active');
-		});
-		$(".close-nav-mobile span, .link.open-modal").click(function() {
-			$('#nav-mobile').removeClass('active');
-		});
 
 		// Modal
 		$(".open-modal").click(function() {
@@ -58,13 +43,6 @@ var $=jQuery.noConflict();
 		$(".close-modal, .exit-modal").click(function() {
 			$('.modal').hide();
 			$('body').removeClass('overflow-hide');
-		});
-		$(".btn-postularme").click(function() {
-			$('.modal-vacante').hide();
-			/* Obtener el nombre de la vacante para formulario de postulación */
-			var title = $(this).attr('for');
-			$('#vacanteName input').val(title);			
-			//$('input[name="postulante-email"]').attr("disabled", true);			
 		});
 
 	});

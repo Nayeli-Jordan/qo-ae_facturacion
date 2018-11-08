@@ -26,7 +26,6 @@ require_once( 'inc/taxonomies.php' );
 add_action( 'wp_enqueue_scripts', function(){
  
     wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(''), '2.1.1', true );
-    wp_enqueue_script( 'ae_parsley', JSPATH.'parsley.min.js', array(), '1.0', true );
     wp_enqueue_script( 'ae_functions', JSPATH.'functions.js', array(), '1.0', true );
  
     wp_localize_script( 'ae_functions', 'siteUrl', SITEURL );
@@ -371,64 +370,5 @@ function ae_alertas_save_metas( $idae_alertas, $ae_alertas ){
             }                      
             $count++;
         } 
-    }
-}
-
-
-/*-------------------------------------------------------------------------------
-    Custom Columns WP-ADMIN
--------------------------------------------------------------------------------*/
-/*
-** Promotor
-*/
-add_filter( 'manage_ae_empleados_posts_columns', 'set_custom_edit_ae_empleados_columns' );
-function set_custom_edit_ae_empleados_columns($columns) {
-    $columns['ae_sexo'] = __( 'Sexo', 'aempleo' );
-    $columns['ae_rfc'] = __( 'RFC', 'aempleo' );
-    $columns['ae_ingreso'] = __( 'Fecha Ingreso', 'aempleo' );
-    $columns['ae_imss'] = __( 'No. IMSS', 'aempleo' );
-    $columns['ae_empresa'] = __( 'Empresa', 'aempleo' );
-
-    return $columns;
-}
-
-add_action( 'manage_ae_empleados_posts_custom_column' , 'custom_ae_empleados_column', 10, 2 );
-function custom_ae_empleados_column( $column, $post_id ) {
-    switch ( $column ) {
-        case 'ae_sexo' :
-            $sexo  = get_post_meta( $post_id, 'ae_empleados_sexo', true );
-            if( $sexo != "" )
-                echo $sexo;
-            else
-                echo "-";
-            break;
-        case 'ae_rfc' :
-            $rfc  = get_post_meta( $post_id, 'ae_empleados_rfc', true );
-            if( $rfc != "")
-                echo $rfc;
-            else
-                echo "-";
-            break;
-        case 'ae_ingreso' :
-            $fecha_ingreso  = get_post_meta( $post_id, 'ae_empleados_fecha_ingreso', true );
-            if( $fecha_ingreso != "")
-                echo $fecha_ingreso;
-            else
-                echo "-";
-            break;
-        case 'ae_imss' :
-            $no_seguro  = get_post_meta( $post_id, 'ae_empleados_no_seguro', true );
-            if( $no_seguro != "")
-                echo $no_seguro;
-            else
-                echo "-";
-            break;
-        case 'ae_empresa' :
-            $empresa  = get_post_meta( $post_id, 'ae_empleados_empresa', true );
-            if( $empresa != "")
-                echo $empresa;
-            else
-                echo "-";
-            break;
     }
 }

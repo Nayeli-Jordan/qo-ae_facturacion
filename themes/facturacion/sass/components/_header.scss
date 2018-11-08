@@ -97,15 +97,6 @@ header {
 				    line-height: 40px;
 				    font-weight: 500;
 				    cursor: pointer;
-				    &:before {
-				    	content:'';
-				    	position: absolute;
-				    	right: 0px;
-						top: 10px;
-				    	width: 1px;
-				    	height: 20px;
-				    	background-color: $light-color;
-				    }
 					&:hover { text-decoration: underline; }
 				}
 				i {     

@@ -9597,6 +9597,11 @@ small {
   font-size: 12px;
 }
 
+/* line 544, ../sass/components/_utilities.scss */
+.user-logged-out #enviar-alertas {
+  display: none;
+}
+
 /* line 2, ../sass/components/_header.scss */
 header.js-header {
   height: 100vh;
@@ -9754,20 +9759,10 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
   cursor: pointer;
 }
 /* line 100, ../sass/components/_header.scss */
-#navAE nav ul li.link:before, #navAE nav ul li a:before {
-  content: '';
-  position: absolute;
-  right: 0px;
-  top: 10px;
-  width: 1px;
-  height: 20px;
-  background-color: #fff;
-}
-/* line 109, ../sass/components/_header.scss */
 #navAE nav ul li.link:hover, #navAE nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 111, ../sass/components/_header.scss */
+/* line 102, ../sass/components/_header.scss */
 #navAE nav ul li i {
   display: inline-block;
   margin-top: -5px;
@@ -9776,7 +9771,7 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
   line-height: 40px;
   vertical-align: middle;
 }
-/* line 118, ../sass/components/_header.scss */
+/* line 109, ../sass/components/_header.scss */
 #navAE nav ul li i.btn-ae-nav {
   width: 40px;
   height: 40px;
@@ -9787,24 +9782,24 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
   cursor: pointer;
 }
 @media only screen and (min-width: 993px) {
-  /* line 118, ../sass/components/_header.scss */
+  /* line 109, ../sass/components/_header.scss */
   #navAE nav ul li i.btn-ae-nav {
     margin-left: 20px;
   }
 }
-/* line 129, ../sass/components/_header.scss */
+/* line 120, ../sass/components/_header.scss */
 #navAE nav ul li i.btn-ae-nav:before {
   display: inline-block;
   vertical-align: middle;
   margin-top: -3px;
   margin-left: 3px;
 }
-/* line 138, ../sass/components/_header.scss */
+/* line 129, ../sass/components/_header.scss */
 #navAE nav ul li:last-child a:before {
   display: none;
 }
 @media only screen and (max-width: 992px) {
-  /* line 142, ../sass/components/_header.scss */
+  /* line 133, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile {
     position: fixed;
     top: 10px;
@@ -9817,7 +9812,7 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
     z-index: 200;
     transition: .3s ease-out;
   }
-  /* line 153, ../sass/components/_header.scss */
+  /* line 144, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile .close-nav-mobile {
     margin-top: 40px;
     color: #fff;
@@ -9825,7 +9820,7 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
     padding: 0 30px;
     cursor: pointer;
   }
-  /* line 159, ../sass/components/_header.scss */
+  /* line 150, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile .close-nav-mobile span {
     display: inline-block;
     width: 30px;
@@ -9834,61 +9829,61 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
     line-height: 30px;
     border-radius: 50%;
   }
-  /* line 166, ../sass/components/_header.scss */
+  /* line 157, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile .close-nav-mobile span:hover {
     color: #00B4EF;
     background-color: #fff;
   }
-  /* line 172, ../sass/components/_header.scss */
+  /* line 163, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile li {
     display: block;
   }
-  /* line 174, ../sass/components/_header.scss */
+  /* line 165, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile li.hide-on-med-and-down {
     display: none !important;
   }
-  /* line 176, ../sass/components/_header.scss */
+  /* line 167, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile a {
     width: 100%;
   }
-  /* line 177, ../sass/components/_header.scss */
+  /* line 168, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile li.link, #navAE nav ul#nav-mobile a {
     padding: 0 30px;
     text-align: left;
     line-height: 45px;
   }
-  /* line 181, ../sass/components/_header.scss */
+  /* line 172, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile li.link:before, #navAE nav ul#nav-mobile a:before {
     display: none;
   }
-  /* line 182, ../sass/components/_header.scss */
+  /* line 173, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile li.link:hover, #navAE nav ul#nav-mobile a:hover {
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  /* line 187, ../sass/components/_header.scss */
+  /* line 178, ../sass/components/_header.scss */
   #navAE nav ul#nav-mobile.active {
     right: 0px;
   }
 }
 
-/* line 197, ../sass/components/_header.scss */
+/* line 188, ../sass/components/_header.scss */
 .title-ae {
   background-color: #00B4EF;
   padding: 50px 0 30px;
   margin-bottom: 40px;
 }
-/* line 201, ../sass/components/_header.scss */
+/* line 192, ../sass/components/_header.scss */
 .title-ae #navAE {
   margin-bottom: 30px;
 }
-/* line 204, ../sass/components/_header.scss */
+/* line 195, ../sass/components/_header.scss */
 .title-ae h2, .title-ae h3 {
   color: #fff;
   text-shadow: 1px 1px #d0d0d0;
 }
 
-/* line 210, ../sass/components/_header.scss */
+/* line 201, ../sass/components/_header.scss */
 .ae-nav {
   position: fixed;
   top: 0px;
@@ -9901,12 +9896,12 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
-/* line 223, ../sass/components/_header.scss */
+/* line 214, ../sass/components/_header.scss */
 .ae-nav .close-ae-nav {
   padding: 0 40px;
   text-align: right;
 }
-/* line 226, ../sass/components/_header.scss */
+/* line 217, ../sass/components/_header.scss */
 .ae-nav .close-ae-nav span {
   display: inline-block;
   width: 30px;
@@ -9917,13 +9912,13 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
   border-radius: 50%;
   transition: .2s ease-out;
 }
-/* line 235, ../sass/components/_header.scss */
+/* line 226, ../sass/components/_header.scss */
 .ae-nav .close-ae-nav span:hover {
   color: #fff;
   background-color: #00B4EF;
   cursor: pointer;
 }
-/* line 244, ../sass/components/_header.scss */
+/* line 235, ../sass/components/_header.scss */
 .ae-nav ul li a {
   display: block;
   padding: 0 40px;
@@ -9931,17 +9926,17 @@ header#header-cuenta .datos-perfil .btn-perfil.btn-logout a:hover {
   font-size: 16px;
   transition: .2s ease-out;
 }
-/* line 250, ../sass/components/_header.scss */
+/* line 241, ../sass/components/_header.scss */
 .ae-nav ul li a:hover, .ae-nav ul li a.active {
   color: #fff;
   background-color: #00B4EF;
   text-decoration: none;
 }
-/* line 256, ../sass/components/_header.scss */
+/* line 247, ../sass/components/_header.scss */
 .ae-nav ul li.subItem a {
   padding: 0 40px 0 60px;
 }
-/* line 259, ../sass/components/_header.scss */
+/* line 250, ../sass/components/_header.scss */
 .ae-nav.active {
   right: 0px;
 }

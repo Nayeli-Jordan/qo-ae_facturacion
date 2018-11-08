@@ -13,8 +13,8 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<!-- Meta robots -->
-		<meta name="robots" content="index, follow" />
-		<meta name="googlebot" content="index, follow" />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="googlebot" content="noindex, nofollow" />
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-32x32.png" sizes="32x32" />
