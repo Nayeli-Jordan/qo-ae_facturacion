@@ -445,34 +445,20 @@
 
 
 //Facturación
-.weekAlert {
+.iconAlert {
 	position: relative;
 	display: none;
-	cursor: pointer;
-	&:hover span { display: inline-block; }
 	i {
 		display: inline-block;
-   		font-size: 18px;		
-	}
-	span {
-		display: none;
-		position: absolute;
-		top: -25px;
-    	left: -55px;
-		width: 140px;
-		background-color: #fff;
-		//border: 1px solid red;
-		box-shadow: 2px 3px 2px 0 rgba(0,0,0,0.25);
+   		font-size: 18px;
+   		
 	}
 }
-.weekAlertActive {
-	.weekAlert { display: inline-block; }
-	.card-carta {
-		.title-cart {
-			//background-color: $primary-color-dark;
-		}
-	}
+.sendAlertActive, .showAlertActive {
+	.iconAlert { display: inline-block; }
 }
+.showAlertActive .iconAlert { color: $red-color; }
+.sendAlertActive .iconAlert { color: #ff7d0c; }
 
 .tipo-prueba-doc p {
 	text-align: left;

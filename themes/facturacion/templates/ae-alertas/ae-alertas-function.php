@@ -42,8 +42,8 @@
 
 	setlocale(LC_ALL,"es_ES"); /* Convertir meses a español*/
 	$today      		= date('Y-m-d'); /* Hoy */
-	/* Activar alerta dos días antes */
-	$FacturaAlert    	= date('Y-m-d', strtotime($today . '+ 2 day'));
+	/* Activar alerta si es cercana pero no es el día de la alerta por correo */
+	$FacturaDanger    	= date('Y-m-d', strtotime($today . '+ 2 day'));
 
 	$dateContrato 		= date('d-M-Y', strtotime($inicioContrato));
 	$dateContratoEsp 	= strftime("%d de %B del %Y", strtotime($inicioContrato)); 
@@ -51,7 +51,7 @@
 	/* Obtener Fecha de próxima facturación */
 	if( $periodoFacturacion === "Semanal" ) : 
 
-		$proxFacturacion = date('Y-m-d', strtotime($dateContrato . '+ 1 week'));
+		$proxFacturacion = date('Y-m-d', strtotime($dateContrato));
 		while( $today > $proxFacturacion) {
 			$proxFacturacion = date('Y-m-d', strtotime($proxFacturacion . '+ 1 week'));						
 		}
@@ -102,7 +102,7 @@
 
 	elseif( $periodoFacturacion === "Mensual" ) :
 
-		$proxFacturacion = date('Y-m-d', strtotime($dateContrato . '+ 1 month'));
+		$proxFacturacion = date('Y-m-d', strtotime($dateContrato));
 		while( $today > $proxFacturacion) {
 			$proxFacturacion = date('Y-m-d', strtotime($proxFacturacion . '+ 1 month'));
 		}
@@ -128,6 +128,8 @@
 
 	endif; 
 
+	/* Activar alerta dos días antes */
+	$FacturaAlert    	= date('Y-m-d', strtotime($proxFacturacion . '- 2 day'));
 	/* Cambiar formato $proxFacturacion*/
 	$proxFacturacionEsp 	= strftime("%d de %B del %Y", strtotime($proxFacturacion));
 ?>

@@ -9476,43 +9476,38 @@ small {
 }
 
 /* line 448, ../sass/components/_utilities.scss */
-.weekAlert {
+.iconAlert {
   position: relative;
   display: none;
-  cursor: pointer;
 }
-/* line 452, ../sass/components/_utilities.scss */
-.weekAlert:hover span {
-  display: inline-block;
-}
-/* line 453, ../sass/components/_utilities.scss */
-.weekAlert i {
+/* line 451, ../sass/components/_utilities.scss */
+.iconAlert i {
   display: inline-block;
   font-size: 18px;
 }
-/* line 457, ../sass/components/_utilities.scss */
-.weekAlert span {
-  display: none;
-  position: absolute;
-  top: -25px;
-  left: -55px;
-  width: 140px;
-  background-color: #fff;
-  box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.25);
-}
 
-/* line 469, ../sass/components/_utilities.scss */
-.weekAlertActive .weekAlert {
+/* line 458, ../sass/components/_utilities.scss */
+.sendAlertActive .iconAlert, .showAlertActive .iconAlert {
   display: inline-block;
 }
 
-/* line 477, ../sass/components/_utilities.scss */
+/* line 460, ../sass/components/_utilities.scss */
+.showAlertActive .iconAlert {
+  color: #d40000;
+}
+
+/* line 461, ../sass/components/_utilities.scss */
+.sendAlertActive .iconAlert {
+  color: #ff7d0c;
+}
+
+/* line 463, ../sass/components/_utilities.scss */
 .tipo-prueba-doc p {
   text-align: left;
   padding: 5px 10px;
 }
 
-/* line 483, ../sass/components/_utilities.scss */
+/* line 469, ../sass/components/_utilities.scss */
 .divider-form {
   border-top: 1px solid #00B4EF;
   padding-top: 10px !important;
@@ -9520,18 +9515,18 @@ small {
 }
 
 /* Alerta vacante  */
-/* line 490, ../sass/components/_utilities.scss */
+/* line 476, ../sass/components/_utilities.scss */
 #content-alertas-vacante {
   margin-bottom: 50px !important;
 }
-/* line 492, ../sass/components/_utilities.scss */
+/* line 478, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante {
   padding: 10px;
   border: 1px solid #00B4EF;
   border-radius: 10px;
   margin-bottom: 15px;
 }
-/* line 497, ../sass/components/_utilities.scss */
+/* line 483, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante .title-area {
   margin-bottom: 5px;
   padding: 0 10px;
@@ -9540,64 +9535,64 @@ small {
   font-weight: 600;
   color: #00B4EF;
 }
-/* line 505, ../sass/components/_utilities.scss */
+/* line 491, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante table {
   width: 100%;
 }
-/* line 508, ../sass/components/_utilities.scss */
+/* line 494, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante table tr {
   text-align: left;
 }
-/* line 510, ../sass/components/_utilities.scss */
+/* line 496, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante table tr th {
   width: 33.33%;
   font-size: 8px;
   text-transform: uppercase;
 }
-/* line 515, ../sass/components/_utilities.scss */
+/* line 501, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante table tr td {
   font-size: 12px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 505, ../sass/components/_utilities.scss */
+  /* line 491, ../sass/components/_utilities.scss */
   #content-alertas-vacante .alerta-vacante table {
     border-right: 1px solid #00B4EF;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 521, ../sass/components/_utilities.scss */
+  /* line 507, ../sass/components/_utilities.scss */
   #content-alertas-vacante .alerta-vacante table tr {
     display: block;
     margin-bottom: 5px;
   }
-  /* line 524, ../sass/components/_utilities.scss */
+  /* line 510, ../sass/components/_utilities.scss */
   #content-alertas-vacante .alerta-vacante table tr th {
     display: none;
   }
-  /* line 525, ../sass/components/_utilities.scss */
+  /* line 511, ../sass/components/_utilities.scss */
   #content-alertas-vacante .alerta-vacante table tr td {
     width: 100%;
     display: block;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 532, ../sass/components/_utilities.scss */
+  /* line 518, ../sass/components/_utilities.scss */
   #content-alertas-vacante .alerta-vacante .no-users {
     border-right: 1px solid #00B4EF;
   }
 }
-/* line 533, ../sass/components/_utilities.scss */
+/* line 519, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante .content-vacante {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 8px;
 }
-/* line 538, ../sass/components/_utilities.scss */
+/* line 524, ../sass/components/_utilities.scss */
 #content-alertas-vacante .alerta-vacante .block-vacantes {
   font-size: 12px;
 }
 
-/* line 544, ../sass/components/_utilities.scss */
+/* line 530, ../sass/components/_utilities.scss */
 .user-logged-out #enviar-alertas {
   display: none;
 }

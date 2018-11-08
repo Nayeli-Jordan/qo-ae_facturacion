@@ -9,6 +9,12 @@
 		<?php include (TEMPLATEPATH . '/templates/template-ae-logout.php'); ?>
 	<?php else: ?>
 		<section class="[ container ] margin-bottom-40">
+			<div class="row margin-bottom">
+				<div class="col s12">
+					<p class="sendAlertActive"><span class='iconAlert'><i class='icon-attention'></i><span>Facturación cercana, a dos días. Se envía correo de alerta.</span></span></p>
+					<p class="showAlertActive"><span class='iconAlert'><i class='icon-attention'></i><span>Facturación muy cercana, a un día o el día de hoy.</span></span></p>
+				</div>
+			</div>
 			<div class="row">
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -25,7 +31,7 @@
 			        while ( $loop->have_posts() ) : $loop->the_post(); 
 						include (TEMPLATEPATH . '/templates/ae-alertas/ae-alertas-function.php'); ?>	
 					
-					<div class="col s12 m6 l4 content-card-alerta margin-bottom-small <?php  if ($proxFacturacion >= $today && $proxFacturacion <= $FacturaAlert) : echo "weekAlertActive"; endif; ?>">
+					<div class="col s12 m6 l4 content-card-alerta margin-bottom-small <?php  if ($today === $FacturaAlert) : echo "sendAlertActive "; endif; if ($proxFacturacion >= $today && $proxFacturacion <= $FacturaDanger) : echo "showAlertActive"; endif; ?>">
 						<div class="card-carta card-alerta">
 							<p class="title-cart"><?php the_title() ?></p>
 							<div class="card-body">
@@ -54,7 +60,7 @@
 									else:
 										echo "Próxima facturación: ";
 									endif; ?>
-									 <span class='weekAlert'><i class='icon-attention color-red'></i><span>Facturación cercana</span></span></strong><br><?php echo $proxFacturacionEsp; ?></p>			
+									 <span class='iconAlert'><i class='icon-attention'></i></span></strong><br><?php echo $proxFacturacionEsp; ?></p>			
 							</div>						
 						</div>
 					</div> <!-- End card facturación --> 		
