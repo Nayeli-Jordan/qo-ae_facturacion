@@ -27,13 +27,14 @@
 			<div class="col s12 sm10 offset-sm1 m8 offset-m2 l6 offset-l3 text-center margin-bottom">
 				<h2 class="color-primary">¡Listo!</h2>
 				<p>Se han enviado automáticamente las próximas facturaciones (dentro de dos días) al correo electrónico designado. <br><br><strong class="color-primary">Si recargas está página se enviarán de nuevo las alertas.</strong><br>Cierra la página o regresa al inicio.</p><br>
-				<a href="<?php echo SITEURL; ?>" class="btn margin-bottom-xlarge">Volver al inicio</a>	
+				<a href="<?php echo SITEURL; ?>" class="btn margin-bottom-xlarge">Regresar</a>	
 			</div>		
 		</div>
 	
 		<?php 
 		$terms = get_terms('tax_ejecutivo');
 		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+			$countAlerts = 0;
 			foreach($terms as $term){
 				/*Obtener header por ejecutivo */
 				$to 			 = $term->description;
@@ -64,6 +65,8 @@
 						/*Si falta dos días para la Facturación visualizar. Sólo se envía un correo dos días antes, NO cada día hasta la facturación */
 						if ($today === $FacturaAlert) : 
 
+							$countAlerts++;
+
 							/* Conocer si al menos hay una facturación próxima (al día siguiente) para enviar el mail */
 							$i++;
 
@@ -85,6 +88,9 @@
 			   	} wp_reset_postdata();
 
 			} /*End foreach*/
+			if ($countAlerts === 0) {
+				echo "<p class='text-center margin-bottom'><span class='color-red'>¡IMPORTANTE! </span><br>No se envió ningún correo ya que no hay alertas programadas para dentro de dos días.</p>";
+			}
 		} ?>
 	</section>
 <?php get_footer(); ?>
