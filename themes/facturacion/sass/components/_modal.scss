@@ -252,6 +252,7 @@
 			.modal-body {
 				padding-top: 50px;
 				height: inherit;
+				max-height: calc(90vh - 250px);
 				text-align: center;
 			}		
 		}
